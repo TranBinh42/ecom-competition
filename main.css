@@ -4,11 +4,14 @@
 h1, h2, footer {
     text-align: center;
 }
-.product-featured-grid, .product-regular-grid {
+.product-featured-grid, .product-regular-grid, .home-section {
     display: grid;
     text-align: center;
     margin: auto;
     max-width: 1200px;
+}
+.home-section img {
+    width: 100%;
 }
 .product-featured-grid {
     grid-template-columns: auto auto auto;
