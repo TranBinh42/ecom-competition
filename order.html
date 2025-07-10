@@ -49,9 +49,9 @@
                             <label for="address">Your Address:</label>
                             <input type="text" name="address" id="address" placeholder="123 Dong Khoi Road,..." required><br>
                             
-                            <label for="commune">Ward/Commune:</label>
-                            <input list="commune">
-                            <datalist id="commune" required>
+                            <label for="communes">Ward/Commune:</label>
+                            <input list="commune" id="communes" required>
+                            <datalist id="commune">
                                 <option value="Sai Gon"></option>
                                 <option value="Tan Hung"></option>
                                 <option value="An Khanh"></option>
@@ -66,9 +66,9 @@
                             </datalist>
                             <br>
 
-                            <label for="province">Province/City:</label>
-                            <input list="province">
-                            <datalist id="province" required>
+                            <label for="provinces">Province/City:</label>
+                            <input list="province" id="provinces" required>
+                            <datalist id="province">
                                 <option value="Ha Noi"></option>
                                 <option value="Ho Chi Minh City"></option>
                             </datalist>
@@ -78,11 +78,10 @@
                             <legend>Choose Products to Order</legend>
                             
                             <label for="products">Select Product(s)</label>
-                            <input list="products">
-                            <datalist id="products">
-                                <option value="Product 1"></option>
+                            <select name="products" id="products" multiple required>
+                                <option value="Product 1">Product 1</option>
 
-                            </datalist>
+                            </select>
                             <br>
                             <p><b>TIP: </b>Hold Ctrl/Shift key to select multiple products</p>
                         </fieldset>
