@@ -85,9 +85,13 @@ input, fieldset {
 button {
     font-size: 16px;
     color: black;
-    background-color: #fff383;
+    background-color: rgb(253, 251, 238);
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin: 10px;
+}
+button:hover {
+    background-color: #fff383;
 }
