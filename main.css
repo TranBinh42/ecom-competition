@@ -35,7 +35,7 @@ footer {
     grid-template-columns: auto auto auto auto auto;
 }
 .home-section img {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 100%;
 }
 .home-section nav {
@@ -57,10 +57,17 @@ footer {
 .product-regular-grid > .product-card-small {
     max-width: 240px;
 }
-.product-featured-grid > .product-card-large img, .product-regular-grid > .product-card-small img {
+.product-card-large img, .product-card-small img {
     margin-top: 15px;
     width: 90%;
 }
+.product-card-large .product-name, .product-card-large .product-price, .product-card-small .product-name, .product-card-small .product-price {
+    color: black;
+}
+.product-card-large .product-name, .product-card-small .product-name {
+    font-weight: 600;
+}
+
 input, fieldset {
     margin: 5px;
 }
