@@ -31,6 +31,7 @@ footer {
     margin: auto;
     max-width: 1200px;
 }
+/* 3 OR 5 for num of grids, rf fractional unit to ensure each card is spaced evenly */
 .product-featured-grid {
     grid-template-columns: repeat(3, 1fr);
 }
