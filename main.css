@@ -25,7 +25,7 @@ footer {
     padding-bottom: 4px;
 }
 /* use max width for better scaling on small windows */
-.product-featured-grid, .product-regular-grid, .home-section img, .order-grid {
+.product-featured-grid, .product-regular-grid, .home-section .banner, .order-grid {
     display: grid;
     text-align: center;
     margin: auto;
@@ -37,7 +37,7 @@ footer {
 .product-regular-grid {
     grid-template-columns: repeat(5, 1fr);
 }
-.home-section img {
+.home-section .banner {
     margin-bottom: 20px;
     width: 100%;
 }
