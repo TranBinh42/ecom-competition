@@ -6,7 +6,7 @@ body {
     margin: 0px;
     padding: 0px;
 }
-nav, h1, h2, footer {
+nav, h1, h2 {
     text-align: center;
     /* width: 100%; */
 }
@@ -18,11 +18,6 @@ h2 {
     margin: 10px;
     padding-top: 10px;
     padding-bottom: 10px;
-}
-footer {
-    /* margin: 4px; */
-    padding-top: 4px;
-    padding-bottom: 4px;
 }
 /* use max width for better scaling on small windows */
 .product-featured-grid, .product-regular-grid, .home-section .banner, .order-grid {
@@ -95,4 +90,36 @@ button {
 }
 button:hover {
     background-color: #fff383;
+}
+footer {
+    /* margin: 4px; */
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.footer-grid {
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+}
+.footer-grid > .contacts {
+    margin: 10px;
+}
+.footer-grid iframe {
+    width: 100%;
+    height: 100%;
+}
+.footer-grid h2 {
+    text-align: left;
+}
+.footer-grid li {
+    margin-bottom: 10px;
+}
+.footer-grid p {
+    margin-left: 10px;
+}
+.footer-grid > .copyright {
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
 }
