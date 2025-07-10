@@ -3,9 +3,12 @@
 }
 body {
     background-color: rgb(253, 251, 238);
+    margin: 0px;
+    padding: 0px;
 }
 nav, h1, h2, footer {
     text-align: center;
+    /* width: 100%; */
 }
 h2, footer {
     background-color: #fff383;
@@ -17,7 +20,7 @@ h2 {
     padding-bottom: 10px;
 }
 footer {
-    margin: 4px;
+    /* margin: 4px; */
     padding-top: 4px;
     padding-bottom: 4px;
 }
@@ -29,10 +32,10 @@ footer {
     max-width: 1200px;
 }
 .product-featured-grid {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
 }
 .product-regular-grid {
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: repeat(5, 1fr);
 }
 .home-section img {
     margin-bottom: 20px;
@@ -61,11 +64,19 @@ footer {
     margin-top: 15px;
     width: 90%;
 }
-.product-card-large .product-name, .product-card-large .product-price, .product-card-small .product-name, .product-card-small .product-price {
+.product-card-large p, .product-card-small p {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
     color: black;
+}
+.product-card-large .product-author, .product-card-small .product-author {
+    color: #4f4f4f;
 }
 .product-card-large .product-name, .product-card-small .product-name {
     font-weight: 600;
+}
+.product-card-large:hover, .product-card-small:hover {
+    background-color: #fff383;
 }
 
 input, fieldset {
@@ -73,8 +84,8 @@ input, fieldset {
 }
 button {
     font-size: 16px;
-    color: #ffffff;
-    background-color: #000000;
+    color: black;
+    background-color: #fff383;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
