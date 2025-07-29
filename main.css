@@ -173,12 +173,12 @@ footer {
         gap: 20px;
     }
 }
-@media all and (max-width: 800px) {
+@media all and (max-width: 1200px) {
     .product-featured-grid > .product-card-large {
-        max-width: 300px;
+        max-width: 298px;
     }
 } 
-@media all and (max-width: 720px) {
+@media all and (max-width: 650px) {
     .product-featured-grid > .product-card-large {
         max-width: 218px;
     }
