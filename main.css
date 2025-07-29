@@ -6,12 +6,17 @@ body {
     margin: 0px;
     padding: 0px;
 }
-h1, h2, h3 {
+h1, .logo, h2, h3 {
     text-align: center;
 }
 h1 {
-    margin: 0px 0px 0px 10px;
+    margin: 0px;
+}
+.logo {
     flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .home-section nav {
     padding: 15px;
@@ -22,7 +27,7 @@ h1 {
     flex-flow: row wrap;
     align-items: center;
 }
-h1 {
+.logo {
     text-align: left;
     padding-bottom: 0px;
 }
@@ -61,11 +66,9 @@ h2 {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    flex-grow: 1;
 }
 
 .home-section .banner {
-    margin-bottom: 20px;
     width: 100%;
 }
 .product-featured-grid > .product-card-large, .product-regular-grid > .product-card-small {
@@ -146,7 +149,7 @@ footer {
     grid-column-end: 3;
 }
 /* Media queries */
-@media all and (max-width: 700px) {
+@media all and (max-width: 740px) {
     .home-section nav {
         padding-bottom: 0px;
     }
@@ -157,10 +160,13 @@ footer {
     .nav-links > a {
         padding-left: 0px;
     }   
-    h1 {
-        text-align: center;
+    .logo {
+        justify-content: center;
     }
-    .hamburger, h1 {
+    .logo > img {
+        margin: 0px 0px 0px 10px;
+    }
+    .hamburger, h1, .logo > img {
         display: block;
         font-size: 1.5em;
         padding-bottom: 15px;
