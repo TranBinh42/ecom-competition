@@ -6,9 +6,19 @@ body {
     margin: 0px;
     padding: 0px;
 }
-nav, h1, h2 {
+h2, h3 {
     text-align: center;
-    /* width: 100%; */
+}
+h1 {
+    margin: 0px 0px 0px 10px;
+    flex-grow: 1;
+}
+nav, .nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-links {
+    justify-self: end;
 }
 h2, footer {
     background-color: #fff383;
@@ -20,7 +30,7 @@ h2 {
     padding-bottom: 10px;
 }
 /* use max width for better scaling on small windows */
-.product-featured-grid, .product-regular-grid, .home-section .banner, .order-grid {
+.product-featured-grid, .product-regular-grid, .order-grid {
     display: grid;
     text-align: center;
     margin: auto;
@@ -39,7 +49,6 @@ h2 {
 }
 .home-section nav {
     padding: 15px;
-    margin-bottom: 10px;
     background-color: #fff383;
 }
 .home-section nav a {
@@ -123,3 +132,4 @@ footer {
     grid-column-start: 1;
     grid-column-end: 3;
 }
+/* Media queries */
