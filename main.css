@@ -1,9 +1,10 @@
 :root {
     font-family: Inter;
     --accent-color: #fff383;
+    --background-color: rgb(253, 251, 238)
 }
 body {
-    background-color: rgb(253, 251, 238);
+    background-color: var(--background-color);
     margin: 0px;
     padding: 0px;
 }

@@ -25,6 +25,8 @@
 }
 fieldset {
     margin: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
 }
 input[type="text"], 
 input[type="email"], 
@@ -34,19 +36,22 @@ input[list] {
     box-sizing: border-box;
     width: 100%;
     height: 30px;
+    margin-top: 7.5px;
+    border-radius: 5px;
+    border: 1px solid gray;
 }
 button.submit {
     font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
     color: black;
-    background-color: rgb(253, 251, 238);
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    background-color: var(--background-color);
+    padding: 10px 20px 10px 20px;
     margin-left: 10px;
 }
 button.submit:hover {
     background-color: var(--accent-color);
+    cursor: pointer;
 }
 p.form-element {
     flex-grow: 1;
@@ -55,7 +60,7 @@ p.form-element {
     color: red;
 }
 .submit-area {
-    margin: 5px 10px 0px 10px;
+    margin: 5px 10px 5px 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -67,6 +72,9 @@ p.form-element {
 select {
     box-sizing: border-box;
     margin: 10px 0px;
+    margin-top: 7.5px;
+    border-radius: 5px;
+    border: 1px solid gray;
     width: 100%;
     height: 95%;
 }
