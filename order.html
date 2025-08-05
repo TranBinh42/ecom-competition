@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="order-form.css">
         <script src="hamburger.js"></script>
         <title>Order</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,107 +33,123 @@
         </header>
         <main>
             <section id="order">
-                <h2>Order Products</h2>
-                <div class="order-grid">
-                    <form action="index.html" method="POST">
-                        <fieldset class="fieldset-grid">
-                            <legend>Enter your Personal Information</legend>
-                            
-                            <label for="given-name">First (Given) Name*:</label>
-                            <input type="text" name="given-name" id="given-name" required><br>
+                <h2>Order Products</h2>     
+                <form action="index.html" method="POST">
+                    <div class="order-container">
+                        <div class="payment-info">
+                            <fieldset>
+                                <legend>Enter your Personal Information</legend>
+                                <p>
+                                    <label for="given-name">First (Given) Name<span class="red">*</span>:</label>
+                                    <input type="text" name="given-name" id="given-name" required>
+                                </p>
+                                <p>
+                                    <label for="family-name">Last (Family) Name<span class="red">*</span>:</label>
+                                    <input type="text" name="family-name" id="family-name" required>
+                                </p>
+                                <p>
+                                    <label for="birth-date">Date of Birth<span class="red">*</span>:</label>
+                                    <input type="date" name="birth-date" id="birth-date" required>
+                                </p>
+                                <p>
+                                    <label for="phone-num">Phone Number<span class="red">*</span>:</label>
+                                    <input type="tel" name="phone-num" id="phone-num" placeholder="012 3456789" required>
+                                </p>
+                                <p>
+                                    <label for="email">Email:</label>
+                                    <input type="email" name="email" id="email" placeholder="example@mail.com">
+                                </p>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Enter your Shipping Address</legend>
+                                
+                                <label for="address">Your Address<span class="red">*</span>:</label>
+                                <input type="text" name="address" id="address" placeholder="123 Dong Khoi Road,..." required>
+                                
+                                <label for="communes">Ward/Commune:</label>
+                                <input list="commune" id="communes">
+                                <datalist id="commune">
+                                    <option value="Sai Gon"></option>
+                                    <option value="Tan Hung"></option>
+                                    <option value="An Khanh"></option>
+                                    <option value="Cau Ong Lanh"></option>
+                                    <option value="Cho Lon"></option>
+                                    <option value="Tan Dinh"></option>
+                                    <option value="Hoan Kiem"></option>
+                                    <option value="Dong Da"></option>
+                                    <option value="Ba Dinh"></option>
+                                    <option value="Hai Ba Trung"></option>
+                                    <option value="Cau Giay"></option>
+                                </datalist>
+                                
 
-                            <label for="family-name">Last (Family) Name*:</label>
-                            <input type="text" name="family-name" id="family-name" required><br>
-
-                            <label for="birth-date">Date of Birth*:</label>
-                            <input type="date" name="birth-date" id="birth-date" required><br>
-                            
-                            <label for="phone-num">Phone Number*:</label>
-                            <input type="tel" name="phone-num" id="phone-num" placeholder="012 3456789" required><br>
-
-                            <label for="email">Email:</label>
-                            <input type="email" name="email" id="email" placeholder="example@mail.com"><br>
-                        </fieldset>
-                        <fieldset class="fieldset-grid">
-                            <legend>Enter your Shipping Address</legend>
-                            
-                            <label for="address">Your Address*:</label>
-                            <input type="text" name="address" id="address" placeholder="123 Dong Khoi Road,..." required><br>
-                            
-                            <label for="communes">Ward/Commune:</label>
-                            <input list="commune" id="communes">
-                            <datalist id="commune">
-                                <option value="Sai Gon"></option>
-                                <option value="Tan Hung"></option>
-                                <option value="An Khanh"></option>
-                                <option value="Cau Ong Lanh"></option>
-                                <option value="Cho Lon"></option>
-                                <option value="Tan Dinh"></option>
-                                <option value="Hoan Kiem"></option>
-                                <option value="Dong Da"></option>
-                                <option value="Ba Dinh"></option>
-                                <option value="Hai Ba Trung"></option>
-                                <option value="Cau Giay"></option>
-                            </datalist>
-                            <br>
-
-                            <label for="provinces">Province/City*:</label>
-                            <input list="province" id="provinces" required>
-                            <datalist id="province">
-                                <option value="Ha Noi"></option>
-                                <option value="Ho Chi Minh City"></option>
-                            </datalist>
-                            <br>
-                        </fieldset>
-                        <fieldset class="fieldset-grid">
-                            <legend>Choose Products to Order</legend>
-                            
-                            <label for="products">Select Product(s)*:</label>
-                            <select name="products" id="products" multiple required>
-                                <option value="adachi-yuri-1">Adachi and Shimamura Vol. 1 (AMAK Vietnam)</option>
-                                <option value="saeki-1">Bloom Into You: Regarding Saeki Sayaka Vol. 1 (Seven Seas US)</option>
-                                <option value="bloom-yuri-5">Bloom Into You Vol. 5 Special Edition (AMAK Vietnam)</option>
-                                <option value="bocchi-3">Bocchi the Rock Vol. 3 (Kim Dong Vietnam)</option>
-                                <option value="bocchi-5">Bocchi the Rock Vol. 5 (Kim Dong Vietnam)</option>
-                                <option value="bocchi-6">Bocchi the Rock Vol. 6 (Kim Dong Vietnam)</option>
-                                <option value="genshin-analogy-1">Genshin Analogy Comic (Ichijinsha Japan)</option>
-                                <option value="jjk-19">Jujutsu Kaisen Vol. 19 Special Edition (Kim Dong Vietnam)</option>
-                                <option value="jjk-26">Jujutsu Kaisen Vol. 26 (Jump Comics Japan)</option>
-                                <option value="lovebullet-1">Love Bullet Vol. 1 (KADOKAWA Japan)</option>
-                                <option value="lyrcoris-1">Lycoris Recoil Vol. 1 (IPM Vietnam)</option>
-                                <option value="lyrcoris-3">Lycoris Recoil Vol. 3 (IPM Vietnam)</option>
-                                <option value="nokotan-1">My Deer Friend Nokotan Vol. 5 (Kim Dong Vietnam)</option>
-                                <option value="onk-1">Oshi No Ko Vol. 1 (IPM Vietnam)</option>
-                                <option value="onk-13">Oshi No Ko Vol. 13 Special Edition (IPM Vietnam)</option>
-                                <option value="pjsk-analogy-3">Project Sekai Colorful Stage! Feat. Hatsune Miku Comic Anthology Vol. 3 (Ichijinsha Japan)</option>
-                                <option value="green-yuri-1">The Guy She Was Interested In Wasn't A Guy At All Vol. 1 (IPM Vietnam)</option>
-                                <option value="moon-yuri-1">The Moon on a Rainy Night Vol. 1 Special Edition (IPM Vietnam)</option>
-                                <option value="moon-yuri-7">The Moon on a Rainy Night Vol. 7 Special Edition (IPM Vietnam)</option>
-                                <option value="elania-12">Wandering Witch: The Journey Of Elaina Vol. 12 (AMAK Vietnam)</option>
-                                <option value="whisper-song-yuri">Whispering You A Love Song Vol. 2 (IPM Vietnam)</option>
-                            </select>
-                            <br>
-                            <p><b>TIP: </b>Hold Ctrl/Shift key to select multiple products</p>
-                        </fieldset>
-                        <fieldset class="fieldset-grid">
-                            <legend>Choose Payment Options</legend>
-
-                            <input type="radio" name="payment" id="cod">
-                            <label for="cod">CoD (Cash on Delivery)</label><br>
-
-                            <input type="radio" name="payment" id="qr">
-                            <label for="qr">QR Code (Scan via Mobile Banking App)</label><br>
-
-                            <input type="radio" name="payment" id="card" disabled>
-                            <label for="card">Debit/Credit Card (not yet supported)</label><br>
-                        </fieldset>
-                        
-                        <input type="checkbox" name="ack-terms" id="ack-terms" required>
-                        <label for="ack-terms">I agree to the Terms and Conditions*</label><br>
-
-                        <button type="submit" class="submit">Order Now</button>
-                   </form>
-                </div>
+                                <label for="provinces">Province/City<span class="red">*</span>:</label>
+                                <input list="province" id="provinces" required>
+                                <datalist id="province">
+                                    <option value="Ha Noi"></option>
+                                    <option value="Ho Chi Minh City"></option>
+                                </datalist>
+                                
+                            </fieldset>
+                            <fieldset>
+                                <legend>Choose Payment Options</legend>
+                                <p>
+                                    <input type="radio" name="payment" id="cod">
+                                    <label for="cod">CoD (Cash on Delivery)</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="payment" id="qr">
+                                    <label for="qr">QR Code (Scan via Mobile Banking App)</label>
+                                </p>
+                                <p>
+                                    <input type="radio" name="payment" id="card" disabled>
+                                    <label for="card">Debit/Credit Card (not yet supported)</label>
+                                </p>
+                            </fieldset>
+                        </div>
+                        <div class="cart">
+                            <fieldset>
+                                <legend>Choose Products to Order</legend>               
+                                <p class="form-element">
+                                    <label for="products">Select Product(s)<span class="red">*</span> (Ctrl + Shift to select multiple products):</label>
+                                    <select name="products" id="products" multiple required>
+                                        <option value="adachi-yuri-1">Adachi and Shimamura Vol. 1 (AMAK Vietnam)</option>
+                                        <option value="saeki-1">Bloom Into You: Regarding Saeki Sayaka Vol. 1 (Seven Seas US)</option>
+                                        <option value="bloom-yuri-5">Bloom Into You Vol. 5 Special Edition (AMAK Vietnam)</option>
+                                        <option value="bocchi-3">Bocchi the Rock Vol. 3 (Kim Dong Vietnam)</option>
+                                        <option value="bocchi-5">Bocchi the Rock Vol. 5 (Kim Dong Vietnam)</option>
+                                        <option value="bocchi-6">Bocchi the Rock Vol. 6 (Kim Dong Vietnam)</option>
+                                        <option value="genshin-analogy-1">Genshin Analogy Comic (Ichijinsha Japan)</option>
+                                        <option value="jjk-19">Jujutsu Kaisen Vol. 19 Special Edition (Kim Dong Vietnam)</option>
+                                        <option value="jjk-26">Jujutsu Kaisen Vol. 26 (Jump Comics Japan)</option>
+                                        <option value="lovebullet-1">Love Bullet Vol. 1 (KADOKAWA Japan)</option>
+                                        <option value="lyrcoris-1">Lycoris Recoil Vol. 1 (IPM Vietnam)</option>
+                                        <option value="lyrcoris-3">Lycoris Recoil Vol. 3 (IPM Vietnam)</option>
+                                        <option value="nokotan-1">My Deer Friend Nokotan Vol. 5 (Kim Dong Vietnam)</option>
+                                        <option value="onk-1">Oshi No Ko Vol. 1 (IPM Vietnam)</option>
+                                        <option value="onk-13">Oshi No Ko Vol. 13 Special Edition (IPM Vietnam)</option>
+                                        <option value="pjsk-analogy-3">Project Sekai Colorful Stage! Feat. Hatsune Miku Comic Anthology Vol. 3 (Ichijinsha Japan)</option>
+                                        <option value="green-yuri-1">The Guy She Was Interested In Wasn't A Guy At All Vol. 1 (IPM Vietnam)</option>
+                                        <option value="moon-yuri-1">The Moon on a Rainy Night Vol. 1 Special Edition (IPM Vietnam)</option>
+                                        <option value="moon-yuri-7">The Moon on a Rainy Night Vol. 7 Special Edition (IPM Vietnam)</option>
+                                        <option value="elania-12">Wandering Witch: The Journey Of Elaina Vol. 12 (AMAK Vietnam)</option>
+                                        <option value="whisper-song-yuri">Whispering You A Love Song Vol. 2 (IPM Vietnam)</option>
+                                    </select>
+                                    
+                                </p>
+                            </fieldset>
+                            <div class="submit-area">
+                                <p>
+                                    <input type="checkbox" name="ack-terms" id="ack-terms" required>
+                                    <label for="ack-terms">I agree to the Terms and Conditions<span class="red">*</span></label>
+                                </p>
+                                <p>
+                                    <button type="submit" class="submit">Order Now</button>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </form>    
             </section>
         </main>
         <footer>

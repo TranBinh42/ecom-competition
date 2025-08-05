@@ -1,0 +1,80 @@
+.order-container {
+    margin: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "payment cart"
+                         "payment cart"
+                         "payment cart";
+}
+.payment-info {
+    grid-area: payment;
+}
+.cart {
+    display: flex;
+    flex-flow: column wrap;
+    grid-area: cart;
+}
+.cart > fieldset {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column wrap;
+}
+.payment-info p, .cart p {
+    margin: 10px 0px;
+}
+fieldset {
+    margin: 10px;
+}
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="date"], 
+input[list] {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+}
+button.submit {
+    font-size: 16px;
+    color: black;
+    background-color: rgb(253, 251, 238);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 10px;
+}
+button.submit:hover {
+    background-color: var(--accent-color);
+}
+p.form-element {
+    flex-grow: 1;
+}
+.red {
+    color: red;
+}
+.submit-area {
+    margin: 5px 10px 0px 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.submit-area > p {
+    margin-top: 0px;
+}
+select {
+    box-sizing: border-box;
+    margin: 10px 0px;
+    width: 100%;
+    height: 95%;
+}
+/* media queries */
+@media all and (max-width: 740px) {
+    .order-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "payment"
+                              "cart";
+    }
+}

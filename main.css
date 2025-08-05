@@ -65,7 +65,7 @@ h2 {
     padding-bottom: 10px;
 }
 /* use max width for better scaling on small windows */
-.product-featured-grid, .product-regular-grid, .order-grid {
+.product-featured-grid, .product-regular-grid {
     max-width: 1200px;
     text-align: center;
     margin: auto;
@@ -109,23 +109,6 @@ h2 {
     font-weight: 600;
 }
 .product-card-large:hover, .product-card-small:hover {
-    background-color: var(--accent-color);
-}
-
-input, fieldset {
-    margin: 5px;
-}
-button.submit {
-    font-size: 16px;
-    color: black;
-    background-color: rgb(253, 251, 238);
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 10px;
-}
-button.submit:hover {
     background-color: var(--accent-color);
 }
 footer {
@@ -207,7 +190,7 @@ footer {
         max-width: 30%;
     }
 }
-@media all and (max-width: 659px) {
+@media all and (max-width: 674px) {
     .product-featured-grid > .product-card-large {
         max-width: 45%;
     }
