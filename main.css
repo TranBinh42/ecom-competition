@@ -10,14 +10,14 @@ body {
 h1, .logo, h2, h3 {
     text-align: center;
 }
-h1 {
+.logo h1 {
     margin: 0px;
+    color: black
 }
 .logo {
     flex-grow: 1;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    text-align: left;
+    padding-bottom: 0px;
 }
 .home-section nav {
     padding: 15px;
@@ -28,15 +28,18 @@ h1 {
     flex-flow: row wrap;
     align-items: center;
 }
-.logo {
-    text-align: left;
-    padding-bottom: 0px;
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .nav-links > a {
     padding-left: 20px;
 }   
 button.hamburger {
     display: none;
+    color: black;
     margin: 0px;
     padding: 0px;
     background-color: var(--accent-color);
@@ -173,7 +176,7 @@ footer {
     .nav-links > a {
         padding-left: 0px;
     }   
-    .logo {
+    .logo a {
         justify-content: center;
     }
     .logo > img {

@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
         navMenu.style.display = "none";
         if (!isHamburgerOpened) {
             isHamburgerOpened = true;
-            
-            // console.log("Button Pressed");
             navMenu.style.display = "flex";
         }
         else if (isHamburgerOpened) {
@@ -23,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function closeNavMenu() {
         if (!isOnDesktopLayout) {
             isHamburgerOpened = false;
-            // console.log("Button Unpressed");
             navMenu.style.display = "none";
         }
     }
@@ -32,13 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if (!isOnDesktopLayout && this.window.innerWidth >= 740) {
             isOnDesktopLayout = true;
             isHamburgerOpened = false;
-            navMenu.style.display = "flex";
-            // console.log("NavMenu Displayed");          
+            navMenu.style.display = "flex";        
         }
         else if (isOnDesktopLayout && this.window.innerWidth < 740) {
             isOnDesktopLayout = false;
             navMenu.style.display = "none";
-            // console.log("NavMenu Hidden")
         }
     });
 });
