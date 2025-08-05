@@ -1,5 +1,6 @@
-* {
+:root {
     font-family: Inter;
+    --accent-color: #fff383;
 }
 body {
     background-color: rgb(253, 251, 238);
@@ -20,7 +21,7 @@ h1 {
 }
 .home-section nav {
     padding: 15px;
-    background-color: #fff383;
+    background-color: var(--accent-color);
 }
 .home-section nav {
     display: flex;
@@ -34,8 +35,12 @@ h1 {
 .nav-links > a {
     padding-left: 20px;
 }   
-.hamburger {
+button.hamburger {
     display: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--accent-color);
+    border: none;
 }
 .nav-links {
     display: flex;
@@ -48,7 +53,7 @@ h1 {
     color: black;
 }
 h2, footer {
-    background-color: #fff383;
+    background-color: var(--accent-color);
     color: black;
 }
 h2 {
@@ -76,7 +81,7 @@ h2 {
     margin: 10px;
 }
 .product-featured-grid > .product-card-large {
-    max-width: 30%;
+    max-width: 31%;
     flex-basis: 30%;
     flex-grow: 1;
 }
@@ -101,13 +106,13 @@ h2 {
     font-weight: 600;
 }
 .product-card-large:hover, .product-card-small:hover {
-    background-color: #fff383;
+    background-color: var(--accent-color);
 }
 
 input, fieldset {
     margin: 5px;
 }
-button {
+button.submit {
     font-size: 16px;
     color: black;
     background-color: rgb(253, 251, 238);
@@ -117,8 +122,8 @@ button {
     padding-bottom: 10px;
     margin: 10px;
 }
-button:hover {
-    background-color: #fff383;
+button.submit:hover {
+    background-color: var(--accent-color);
 }
 footer {
     /* margin: 4px; */
@@ -154,12 +159,16 @@ footer {
 }
 /* Media queries */
 @media all and (max-width: 740px) {
-    .home-section nav {
+    /* .home-section nav {
         padding-bottom: 0px;
-    }
+    } */
     .nav-links {
         display: none;
+        margin-top: 15px;
         align-items: flex-start;
+        flex-flow: column nowrap;
+        flex-basis: 100%;
+        gap: 20px;
     }
     .nav-links > a {
         padding-left: 0px;
@@ -170,20 +179,17 @@ footer {
     .logo > img {
         margin: 0px 0px 0px 10px;
     }
-    .hamburger, h1, .logo > img {
+    button.hamburger, h1, .logo > img {
         display: block;
         font-size: 1.5em;
-        padding-bottom: 15px;
     }
-    .hamburger:hover ~ .nav-links, .nav-links:hover {
-        margin-bottom: 15px;
+    /* button.hamburger:hover ~ .nav-links {
+        
         display: flex;
-        flex-flow: column nowrap;
-        flex-basis: 100%;
-        gap: 20px;
-    }
+        
+    } */
 }
-@media all and (max-width: 1000px) {
+@media all and (max-width: 1050px) {
     /* .product-featured-grid > .product-card-large {
         flex-basis: 30%;
     } */

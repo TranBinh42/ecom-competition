@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="main.css">
+        <script src="hamburger.js"></script>
         <title>Order</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +13,12 @@
     <body>
         <header class="home-section" id="home">
             <nav>
-                <div class="hamburger">☰</div>
+                <button class="hamburger" id="hamburger">☰</button>
                 <div class="logo">
                     <img src="source/lotus.png" alt="" width="36">
                     <h1>Lily's Books</h1>
                 </div>
-                <div class="nav-links">
+                <div class="nav-links" id="nav-menu">
                     <a href="index.html#home">Home</a>
                     <a href="index.html#new">New Arrivals</a>
                     <a href="index.html#best-sellers">Best Sellers</a>
@@ -127,7 +128,7 @@
                         <input type="checkbox" name="ack-terms" id="ack-terms" required>
                         <label for="ack-terms">I agree to the Terms and Conditions*</label><br>
 
-                        <button type="submit">Order Now</button>
+                        <button type="submit" class="submit">Order Now</button>
                    </form>
                 </div>
             </section>
