@@ -21,9 +21,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }       
     }
     function closeNavMenu() {
-        isHamburgerOpened = false;
-        // console.log("Button Unpressed");
-        navMenu.style.display = "none";
+        if (!isOnDesktopLayout) {
+            isHamburgerOpened = false;
+            // console.log("Button Unpressed");
+            navMenu.style.display = "none";
+        }
     }
 
     window.addEventListener("resize", function() {
